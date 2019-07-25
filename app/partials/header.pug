@@ -1,0 +1,25 @@
+.header
+  .wrapper
+    .row
+      .column-tablet-1-1
+        .header__wrapper
+          .logo 
+            a(href="#")
+              span сонячний порт
+          .menu-opener
+            span
+            span
+            span
+
+          .menu
+            -
+              var menu = [
+                {text:'Головна', href:'index.html', active: 1},
+                {text:'Про проект', href:'gratia-menu.html'},
+                {text:'Показники', href:'dish.html'},
+                {text:'Галерея', href:'contact.html'},
+                {text:'Новини', href:'dish.html'},
+                {text:'Контакти', href:'dish.html'}
+              ];
+            +menu(menu)
+    

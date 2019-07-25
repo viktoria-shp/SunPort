@@ -1,0 +1,52 @@
+.menu-opener
+  width: 25px
+  height: 25px
+  border-radius: 5px
+  padding: 5px
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  cursor: pointer
+  z-index: 10
+  +breakpoint(laptop)
+    display: none
+  span
+    height: 3px
+    width: 100%
+    background-color: #fff
+    border-radius: 3px
+@media (max-width: 64em)
+  .header__wrapper
+    .menu
+      position: fixed
+      top: calc(70px * -5)
+      width: 100%
+      ul
+        flex-direction: column
+        padding: 0
+        li
+          display: flex
+          justify-content: center
+          align-items: center
+          padding: 0 50px
+          margin: 10px 2px
+          a
+            text-decoration: none
+            color: #fff
+            font-size: 10px
+            padding-bottom: 2px
+            text-transform: uppercase
+          a:hover
+            color: #d89b64          
+            border-bottom: 1px solid #d89b64 
+    .menu.menu-is-active
+      display: flex
+      position: fixed
+      top: 30%
+      background-color: #3881D8
+      z-index: 8
+      width: 50%
+      left: 50%
+      right: 50%
+      transform: translate(-50%, -50%)
+      justify-content: center

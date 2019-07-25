@@ -1,0 +1,225 @@
+.hero
+  background-image: url("../img/header-img.jpg")
+  background-repeat: round
+  &__description
+    text-align: center
+    margin: 100px 20px 60px
+    +breakpoint(tablet)
+      margin: 150px 0 150px
+      text-align: none
+    +breakpoint(laptop)
+      margin: 290px 0 370px
+      text-align: none
+    .title
+      font-weight: 500
+      font-size: 30px
+      font-family: $mfont
+      color: #fff
+      margin-top:  60px
+      text-transform: none
+      +breakpoint(laptop)
+        font-size: 80px
+        font-family: $mfont
+        color: #fff
+    .right-t
+      display: flex
+      justify-content: flex-end
+      text-align: start
+      .text
+        font-size: 12px
+        font-family: $mfont
+        color: #fff    
+        text-transform: none  
+        margin: 15px 0 50px
+        padding-bottom: 10px
+        border-bottom: 1px solid #fff
+        +breakpoint(tablet)
+          width: 60%
+          margin-top: 25px
+          padding-bottom: 15px
+        +breakpoint(laptop)   
+          font-size: 20px
+          width: 70%
+          margin-top: 55px
+          padding-bottom: 44px
+.section-project-description
+  margin: 30px 0 25px
+  +breakpoint(laptop)
+    margin: 60px 0 50px
+  .project-description
+    display: flex
+    flex-direction: column
+    +breakpoint(tablet)
+      text-align: unset
+      flex-direction: row
+      margin-bottom: 30px  
+    +breakpoint(desktop)
+      margin-bottom: 60px
+    >div:first-child
+      padding-right: 0
+      +breakpoint(tablet)
+        padding-right: 20px
+      +breakpoint(laptop)
+        padding-right: 40px
+      +breakpoint(desctop)
+        padding-right: 80px
+    >div:last-child
+      padding-left: 0
+      +breakpoint(tablet)
+        padding-left: 20px
+      +breakpoint(laptop)
+        padding-left: 40px
+      +breakpoint(desctop)
+        padding-left: 80px
+    &__img
+      font-size: 0
+      position: relative
+      img
+        width: 100%
+        height: auto
+    &__img.right_ind
+      &:after
+          content: ""
+          position: absolute
+          top: 70px
+          right: -20px
+          width: 20px
+          height: 99px
+          background: yellow
+    &__title
+      margin: 20px 0
+      text-align: left
+      +breakpoint(desktop)
+        margin-bottom: 60px   
+      span
+        font-family: $mfont
+        font-weight: bold
+        font-size: 20px
+        text-transform: uppercase
+        +breakpoint(laptop)
+          font-size: 30px
+        +breakpoint(desktop)
+          font-size: 40px   
+    &__text
+      text-align: justify
+      p
+        font-family: $mfont
+        font-size: 10px
+        padding-bottom: 20px
+        +breakpoint(laptop)
+          font-size: 14px
+        +breakpoint(desktop)
+          font-size: 18px   
+    .c-t
+      display: flex
+      justify-content: center
+      flex-direction: column
+  .project-reports
+    display: flex
+    width: 100%
+    flex-direction: column
+    text-align: center
+    +breakpoint(tablet)
+      align-items: center
+      text-align: unset
+      flex-direction: row
+    +breakpoint(desktop)
+      margin-bottom: 60px  
+    >div:first-child
+      padding-right: 0
+      +breakpoint(tablet)
+        padding-right: 20px
+      +breakpoint(laptop)
+        padding-right: 40px
+      +breakpoint(desctop)
+        padding-right: 80px
+    >div:last-child
+      padding-left: 0
+      +breakpoint(tablet)
+        padding-left: 20px
+      +breakpoint(laptop)
+        padding-left: 40px
+      +breakpoint(desctop)
+        padding-left: 80px
+    &__img
+      font-size: 0
+      display: flex
+      justify-content: flex-end
+      position: relative
+      img
+        width: 100%
+        height: auto
+    &__img.left_ind
+      &:after
+          content: ""
+          position: absolute
+          top: 70px
+          left: -20px
+          width: 20px
+          height: 99px
+          background: yellow
+    &__link
+      display: flex
+      flex-direction: column
+      margin-bottom: 20px
+      +breakpoint(tablet)
+        margin-bottom: 0
+      a
+        text-decoration: none
+        color: #57A4FF
+        font-size: 12px
+        font-family: $mfont
+        margin: 2px 0
+        +breakpoint(laptop)
+          font-size: 14px
+          margin: 12px 0
+        +breakpoint(desktop)
+          font-size: 20px 
+          margin: 16px 0 
+    &__title
+      margin-bottom: 10px
+      +breakpoint(laptop)
+        margin-bottom: 30px
+      +breakpoint(desktop)
+        margin-bottom: 50px  
+      span
+        font-family: $mfont
+        font-weight: bold
+        font-size: 20px
+        text-transform: uppercase
+        +breakpoint(laptop)
+          font-size: 30px
+        +breakpoint(desktop)
+          font-size: 40px   
+
+
+.section-project-indexes 
+
+.project-indexes
+  display: flex
+  flex-wrap: wrap
+  margin: 0 #{-$gutter/2}
+.col
+  display: flex
+  flex-direction: column
+.d-col
+  display: flex
+
+.project-row
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  width: 100%
+.project-col
+  display: flex
+.project-col-title
+  width: 80%
+.project-col-title.two-cols
+  div
+    width: 50%
+.project-col-number
+  width: 20%
+  justify-content: flex-end
+.gallery
+  &__img
+    display: flex

@@ -1,0 +1,43 @@
+@import "_vars"
+.m-b
+  @for $i from 1 through 5 
+    #{$i*$v-step}
+    .test - #{$i*$v-step} - class 
+      padding: #{$i*$v-step} * 1px
+[class*="column"]
+  width: 100%
+  padding: 0 $gutter/2
+.column
+  @each $point in $points
+    &-#{$point}
+      @each $column in $columns
+        &-#{$column}
+          padding: 0 $gutter/2
+          width: 100%
+.column
+  @each $point in $points
+    +breakpoint($point)
+      &-#{$point}
+        @each $column in $columns
+          &-#{$column}
+            $percents: percentage(number(str-slice($column,1,1)) / number(str-slice($column,3,3)))
+            max-width: $percents
+.test-clas__function
+  margin: (number($test))
+.wrapper
+  width: 100%
+  margin: 0 auto
+  max-width: $content-width
+  padding: 0 $gutter/2
+.row
+  display: flex
+  flex-wrap: wrap
+  margin: 0 #{-$gutter/2} 
+
+.justify-between
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  width: 100%
+  position: relative
+     
