@@ -4,7 +4,7 @@ html(lang='uk')
   include partials/mixin
 body
   include partials/header
-  .hero.section-hero
+  .hero.section-hero#hero
     .wrapper
       .row
         .column-phablet-3-4.column-tablet-3-4.column-laptop-3-4.column-desktop-1-2
@@ -13,11 +13,10 @@ body
               span Сонячний порт
             .right-t
               .text
-                span Lorem ipsum dolor sit amet, praesent eget, semper fermentum tortor nulla wisi vel, integer pede, lobortis etiam dui et enim
-      
+                span Lorem ipsum dolor sit amet, praesent eget, semper fermentum tortor nulla wisi vel, integer pede, lobortis etiam dui et enim      
   .wrapper
     .row.section-project-description
-      .project-description
+      .project-description#about
         .column-laptop-1-2
           .project-description__img.right_ind
             img(src="img/description-project.jpg")
@@ -33,79 +32,177 @@ body
             span звіти
           .project-reports__link
             a(href="#") Звіт про постачання та використання енергії
+              img(src="img/exist-icon.svg")
             a(href="#") Звіт про фінансові результати
+              img(src="img/exist-icon.svg")
             a(href="#") Звіт про баланс
+              img(src="img/exist-icon.svg")
         .column-laptop-1-2
           .project-reports__img.left_ind
             img(src="img/description-reports.jpg")     
-    .row.section-project-indexes 
+    
+.section-project-indexes
+  .bg-color
+  .wrapper
+    .row
       .column-laptop-1-1
-        .project-indexes__title
-          span технічно-економічні показники проекту
-        .column-laptop-4-5
-          .project-indexes
-            .project-row
-              .project-col.project-col-title.two-cols
-                div
-                  |teasdasdasdasdasdasd
-                div
-                  |teasdasdasdasdasdasd
-              .project-col.project-col-number
-                div 10
-            .project-row
-              .project-col.project-col-title.two-cols
-                div
-                  
-                div
-                  |teasdasdasdasdasdasd
-              .project-col.project-col-number
-                div 10
-
-            .project-row
-              .project-col.project-col-title
-                |teasdasdasdasdasdasd
-              .project-col.project-col-number
-                |10
-            
-            .project-row
-              .project-col.project-col-title
-                |teasdasdasdasdasdasd
-              .project-col.project-col-number
-                |110
+        .project-indexes#indexes     
+          .column-laptop-1-2
+            .project-indexes__title
+              span технічно-економічні показники проекту
+          .column-laptop-3-4
+            .project-indexes__text
+              .project-row
+                .project-col.project-col-title.two-cols
+                  div
+                    |Проектна потужність СЕС
+                  div
+                    |по фотоелектричним модулям (по DC), кВт
+                .project-col.project-col-number
+                  div 1064
+              .project-row
+                .project-col.project-col-title.two-cols
+                  div
+                    
+                  div
+                    |по фотоелектричним модулям (по DC), кВт
+                .project-col.project-col-number
+                  div 880
+              .project-row
+                .project-col.project-col-title
+                  |Орієнтована кількість фотоелектричних модулів, шт
+                .project-col.project-col-number
+                  |3870            
+              .project-row
+                .project-col.project-col-title
+                  |Одиночна потужність фотоелектричного модуля, Вт
+                .project-col.project-col-number
+                  |275
+              .project-row
+                .project-col.project-col-title
+                  |Загальна площа земельної ділянки (орієнтовно), га
+                .project-col.project-col-number
+                  |1,4008
+              .project-row
+                .project-col.project-col-title
+                  |Спрінг-інвертор (на вибір проектувальників), один потужність 40 кВт
+                .project-col.project-col-number
+                  |22
+              .project-row
+                .project-col.project-col-title
+                  |Трансформаторна підстанція КТП 1000/10/0,4
+                .project-col.project-col-number
+                  |1
+              .project-row
+                .project-col.project-col-title
+                  |Адміністративно-побутовий корпус (існуючий) орієнтовно, м²
+                .project-col.project-col-number
+                  |18
+.wrapper
   .row.section-gallery
     .column-laptop-1-1
-      .gallery
-        .gallery__title
-          span галерея
-        .gallery__img
-          .column-laptop-1-4
-            |img
-          .column-laptop-1-4
-            |img
-          .column-laptop-1-4
-            |img
-          .column-laptop-1-4
-            |img
-        .gallery__link
-          a(href="#") дивитись всі
-  .row.section-news
-    .column-laptop-1-1
-      .news
-        .news__title
-          span галерея
-        .gallery__img
-          .column-laptop-1-4
-            |img
-          .column-laptop-1-4
-            |img
-          .column-laptop-1-4
-            |img
-          .column-laptop-1-4
-            |img
-        .gallery__link
-          a(href="#") дивитись всі
-
-
-  
-  include partials/footer
-  
+      .gallery#gallery
+        .column-laptop-1-1
+          .gallery__title
+            span галерея
+        .gallery__img          
+          .column-tablet-1-2.column-laptop-1-4.gallery__img-width
+            img(src="img/gallery-img1.jpg")
+          .column-tablet-1-2.column-laptop-1-4.gallery__img-width
+            img(src="img/gallery-img2.jpg")
+          .column-tablet-1-2.column-laptop-1-4.gallery__img-width
+            img(src="img/gallery-img3.jpg")
+          .column-tablet-1-2.column-laptop-1-4.gallery__img-width
+            img(src="img/gallery-img4.jpg")
+        .column-laptop-1-1
+          .gallery__link
+            a(href="#") Дивитись всі 
+              img(src="img/arrow-gallery.svg")
+.section-news
+  .wrapper
+    .row
+      .column-laptop-1-1
+        .news#news
+          .column-laptop-1-1
+            .news__title
+              span новини
+            .slick-carousel.news__items
+              .column-tablet-1-2.column-laptop-1-4
+                .news-item
+                  .news-item__img.news__img-width
+                    img(src="img/news1.jpg")
+                  .news-item__title
+                    span Назва новини
+                  .news-item__date
+                    span 15.07.2019
+                  .news-item__text
+                    span Lorem ipsum dolor sit amet, praesent eget, semper fermentum tortor nulla wisi vel, integer pede. 
+                  .news-item__link
+                    a(href="news-open.html") Читати
+                      span &#8594;
+              .column-tablet-1-2.column-laptop-1-4
+                .news-item
+                  .news-item__img.news__img-width
+                    img(src="img/news2.jpg")
+                  .news-item__title
+                    span Якщо назва новини є досить довгою, це буде виглядати...
+                  .news-item__date
+                    span 08.07.2019
+                  .news-item__text
+                    span Lorem ipsum dolor sit amet, praesent eget, semper fermentum tortor nulla wisi vel, integer pede. 
+                  .news-item__link
+                    a(href="news-open.html") Читати
+                      span &#8594;
+              .column-tablet-1-2.column-laptop-1-4
+                .news-item
+                  .news-item__img.news__img-width
+                    img(src="img/news3.jpg")
+                  .news-item__title
+                    span Назва новини
+                  .news-item__date
+                    span 28.06.2019
+                  .news-item__text
+                    span Lorem ipsum dolor sit amet, praesent eget, semper fermentum tortor nulla wisi vel, integer pede. 
+                  .news-item__link
+                    a(href="#") Читати
+                      span &#8594;
+              .column-tablet-1-2.column-laptop-1-4
+                .news-item
+                  .news-item__img.news__img-width
+                    img(src="img/news4.jpg")
+                  .news-item__title
+                    span Назва новини
+                  .news-item__date
+                    span 14.06.2019
+                  .news-item__text
+                    span Lorem ipsum dolor sit amet, praesent eget, semper fermentum tortor nulla wisi vel, integer pede. 
+                  .news-item__link
+                    a(href="news-open.html") Читати
+                      span &#8594;
+              .column-tablet-1-2.column-laptop-1-4
+                .news-item
+                  .news-item__img.news__img-width
+                    img(src="img/news4.jpg")
+                  .news-item__title
+                    span Назва новини
+                  .news-item__date
+                    span 14.06.2019
+                  .news-item__text
+                    span Lorem ipsum dolor sit amet, praesent eget, semper fermentum tortor nulla wisi vel, integer pede. 
+                  .news-item__link
+                    a(href="news-open.html") Читати
+                      span &#8594;
+              .column-tablet-1-2.column-laptop-1-4
+                .news-item
+                  .news-item__img.news__img-width
+                    img(src="img/news4.jpg")
+                  .news-item__title
+                    span Назва новини
+                  .news-item__date
+                    span 14.06.2019
+                  .news-item__text
+                    span Lorem ipsum dolor sit amet, praesent eget, semper fermentum tortor nulla wisi vel, integer pede. 
+                  .news-item__link
+                    a(href="news-open.html") Читати
+                      span &#8594;    
+include partials/footer

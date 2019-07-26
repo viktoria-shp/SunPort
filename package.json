@@ -23,6 +23,7 @@
     "gulp-pug-inheritance": "^0.2.1",
     "gulp-sass": "^4.0.2",
     "gulp-sass-partials-imported": "^1.0.7",
-    "gulp-server-livereload": "^1.9.2"
+    "gulp-server-livereload": "^1.9.2",
+    "slick-carousel": "^1.8.1"
   }
 }

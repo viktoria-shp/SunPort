@@ -1,6 +1,9 @@
 .hero
   background-image: url("../img/header-img.jpg")
   background-repeat: round
+  height: 100vh
+  +breakpoint(mobileonly)
+    height: auto
   &__description
     text-align: center
     margin: 100px 20px 60px
@@ -33,6 +36,7 @@
         margin: 15px 0 50px
         padding-bottom: 10px
         border-bottom: 1px solid #fff
+        width: 60%
         +breakpoint(tablet)
           width: 60%
           margin-top: 25px
@@ -56,21 +60,13 @@
     +breakpoint(desktop)
       margin-bottom: 60px
     >div:first-child
-      padding-right: 0
+      padding-right: 5px
       +breakpoint(tablet)
         padding-right: 20px
       +breakpoint(laptop)
         padding-right: 40px
       +breakpoint(desctop)
         padding-right: 80px
-    >div:last-child
-      padding-left: 0
-      +breakpoint(tablet)
-        padding-left: 20px
-      +breakpoint(laptop)
-        padding-left: 40px
-      +breakpoint(desctop)
-        padding-left: 80px
     &__img
       font-size: 0
       position: relative
@@ -96,6 +92,8 @@
         font-weight: bold
         font-size: 20px
         text-transform: uppercase
+        +breakpoint(tablet)
+          font-size: 25px
         +breakpoint(laptop)
           font-size: 30px
         +breakpoint(desktop)
@@ -106,6 +104,8 @@
         font-family: $mfont
         font-size: 10px
         padding-bottom: 20px
+        +breakpoint(tablet)
+          font-size: 12px
         +breakpoint(laptop)
           font-size: 14px
         +breakpoint(desktop)
@@ -118,23 +118,14 @@
     display: flex
     width: 100%
     flex-direction: column
-    text-align: center
     +breakpoint(tablet)
       align-items: center
       text-align: unset
       flex-direction: row
     +breakpoint(desktop)
       margin-bottom: 60px  
-    >div:first-child
-      padding-right: 0
-      +breakpoint(tablet)
-        padding-right: 20px
-      +breakpoint(laptop)
-        padding-right: 40px
-      +breakpoint(desctop)
-        padding-right: 80px
     >div:last-child
-      padding-left: 0
+      padding-left: 5px
       +breakpoint(tablet)
         padding-left: 20px
       +breakpoint(laptop)
@@ -170,6 +161,15 @@
         font-size: 12px
         font-family: $mfont
         margin: 2px 0
+        display: flex
+        flex-direction: row-reverse
+        justify-content: flex-end
+        align-items: center
+        img
+          padding-right: 10px
+          width: 13%
+          +breakpoint(laptop)
+            padding-right: 20px
         +breakpoint(laptop)
           font-size: 14px
           margin: 12px 0
@@ -194,32 +194,247 @@
 
 
 .section-project-indexes 
-
+  background-image: url(../img/indexes.jpg)
+  position: relative
+  padding: 35px 0
+  +breakpoint(laptop)
+    padding: 100px 0
+  .bg-color
+    position: absolute
+    background-image: linear-gradient(116.34deg, rgba(57, 116, 185, 0.9) 16.79%, rgba(56, 129, 216, 0.9) 58.68%)
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
 .project-indexes
+  color: #fff
   display: flex
   flex-wrap: wrap
   margin: 0 #{-$gutter/2}
-.col
-  display: flex
-  flex-direction: column
-.d-col
-  display: flex
-
+  position: relative
+  &__title
+    font-family: $mfont
+    font-weight: bold
+    text-transform: uppercase
+    font-size: 15px
+    margin-bottom: 30px
+    text-align: center
+    +breakpoint(tablet)
+      font-size: 20px
+      margin-bottom: 40px
+      text-align: justify
+    +breakpoint(laptop)
+      font-size: 30px
+    +breakpoint(desktop)
+      font-size: 40px
+      margin-bottom: 50px
+  &__text
+    font-family: $mfont
+    font-size: 11px 
+    +breakpoint(tablet)
+      font-size: 14px 
+    +breakpoint(laptop)
+      font-size: 16px
+    +breakpoint(desktop)
+      font-size: 20px    
 .project-row
   display: flex
   flex-wrap: wrap
   justify-content: space-between
   width: 100%
-.project-col
-  display: flex
-.project-col-title
-  width: 80%
-.project-col-title.two-cols
-  div
-    width: 50%
-.project-col-number
-  width: 20%
-  justify-content: flex-end
+  margin-bottom: 10px
+  padding-top: 5px
+  border-top: 1px solid #57A4FF
+  +breakpoint(tablet)
+    margin-bottom: 20px
+    padding-top: 10px
+  +breakpoint(laptop)
+    margin-bottom: 30px
+    padding-top: 14px
+  +breakpoint(desktop)
+    margin-bottom: 35px
+    padding-top: 18px
+  .project-col
+    display: flex
+  .project-col-title
+    width: 86%
+  .project-col-title.two-cols
+    div
+      width: 50%
+  .project-col-number
+    width: 14%
+    justify-content: flex-end
 .gallery
+  margin: 40px 0 30px
+  +breakpoint(laptop)
+    margin: 80px 0 60px
+  &__title
+    font-family: $mfont
+    font-weight: bold
+    font-size: 20px
+    text-transform: uppercase
+    margin-bottom: 20px
+    +breakpoint(tablet)
+      font-size: 20px
+      margin-bottom: 40px
+    +breakpoint(laptop)
+      font-size: 30px
+    +breakpoint(desktop)
+      font-size: 40px
+      margin-bottom: 50px
   &__img
     display: flex
+    flex-direction: column
+    +breakpoint(tablet)
+      flex-direction: row
+      justify-content: space-between
+    .gallery__img-width
+      overflow: hidden
+      max-height: 300px
+      margin: 10px 0
+      +breakpoint(tablet)
+        max-height: 230px
+      +breakpoint(laptop)
+        width: calc(25% - 30px)
+        padding: 0        
+  &__link
+    margin-top: 10px
+    display: flex
+    justify-content: flex-end
+    +breakpoint(tablet)
+      margin-top: 40px
+    a
+      color: #57A4FF
+      font-family: $mfont
+      font-size: 20px
+      text-decoration: none
+      display: flex
+      img 
+        margin-left: 10px
+        width: 8%
+        +breakpoint(tablet)
+          margin-left: 20px
+.section-news
+  background-color: #F6F6F6
+  padding: 40px 0
+  +breakpoint(tablet)
+    padding: 80px 0
+  .news
+    &__title
+      font-family: $mfont
+      font-weight: bold
+      text-transform: uppercase
+      font-size: 20px
+      color: #4D4C4C
+      margin-bottom: 20px
+      +breakpoint(tablet)
+        font-size: 20px
+        color: #4D4C4C
+        margin-bottom: 40px
+      +breakpoint(laptop)
+        font-size: 40px
+        margin-bottom: 60px
+    &__items
+      display: flex
+      flex-direction: row
+      .news-item      
+        font-family: $mfont
+        &__img
+          display: flex
+        .news__img-width
+          overflow: hidden
+          max-height: 170px
+          margin:  0 15px          
+        &__title
+          font-style: medium
+          font-size: 16px
+          color: #4D4C4C
+          margin: 10px 15px
+          +breakpoint(tablet)
+            font-size: 18px
+            margin: 10px 15px
+          +breakpoint(laptop)
+            font-size: 22px
+            margin-bottom: 20px
+        &__date
+          font-size: 14px
+          color: #C4C4C4
+          margin: 10px 15px
+          +breakpoint(tablet)
+            font-size: 14px
+            margin: 5px 15px 10px
+          +breakpoint(laptop)
+            font-size: 18px
+            margin: 10px 0 15px
+        &__text
+          font-size: 12px
+          color: #787878
+          margin: 10px 15px
+          +breakpoint(tablet)
+            font-size: 14px
+            color: #787878
+            margin-bottom: 15px
+          +breakpoint(laptop)
+            font-size: 18px
+            color: #787878
+            margin-bottom: 30px
+        &__link
+          a
+            color: #57A4FF
+            font-size: 14px
+            text-decoration: none
+            margin: 10px 15px
+            +breakpoint(tablet)
+              margin: 0
+              font-size: 16px
+              margin: 10px 15px
+            +breakpoint(laptop)
+              margin: 0
+              font-size: 18px
+            span
+              margin: 10px 15px
+              +breakpoint(tablet)
+                margin-left: 15px
+.slick-carousel
+  .slide-content
+    margin: 0 $gutters
+    padding: 50px 100px
+    background: #fff  
+  .slick-list 
+     margin: 20px 0px 
+  .slick-prev, .slick-next 
+    position: absolute
+    width: 30px
+    height: 30px
+    color: #57A4FF 
+  .slick-prev:hover, .slick-next:hover
+    color: #E5E5E5
+  .slick-prev 
+    background-image: url(../img/arrow-left.svg)
+    left: -15px
+    +breakpoint(laptop)
+      left: -10px
+    +breakpoint(desktop)
+      left: -120px
+  .slick-next 
+    background-image: url(../img/arrow-right.svg)
+    right: -15px
+    +breakpoint(laptop)
+      right: -10px
+    +breakpoint(desktop)
+      right: -120px
+  .slick-prev:before, .slick-next:before
+    content: ''
+  .slick-dots 
+    list-style: none
+    margin: 0 auto
+    text-align: center     
+  .slick-prev:hover, .slick-prev:focus
+    background-image: url(../img/arrow-lefthover.svg)
+  .slick-next:hover, .slick-next:focus
+    background-image: url(../img/arrow-righthover.svg)
+  .slick-dots li.slick-active button:before
+    color: #57A4FF 
+  .slick-dots
+    +breakpoint(mobileonly)
+      bottom: 25px

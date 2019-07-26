@@ -55,10 +55,18 @@
               font-size: 18px
 .header.fixed
   background-color: #3881D8
-  z-index: 1
+  z-index: 10
+  transition: all .3s cubic-bezier(.215,.61,.355,1)
   .header__wrapper
     margin-top: 0
     margin-bottom: 0
     z-index: 20
     +breakpoint(laptop)
       margin-top: 0
+.header.new
+  background-color: #3881D8
+  z-index: 1
+  .header__wrapper
+    margin: 0
+.header.new + .wrapper
+  padding-top: 60px
