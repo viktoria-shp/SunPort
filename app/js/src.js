@@ -61,7 +61,7 @@ $().ready(function(){
       e.preventDefault();
       if($(this.hash).length){
         $('body,html').animate({
-            scrollTop: $(this.hash).offset().top
+            scrollTop: $(this.hash).offset().top - 100
         }, 1000);
         $(this).closest('.menu').find('.active').removeClass('active');
         $(this).closest('li').addClass('active')
