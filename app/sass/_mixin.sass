@@ -25,7 +25,10 @@
   @return if($minus, -$result, $result)
 
 @mixin breakpoint($point)
-  @if $point == desktop 
+  @if $point == largedesktop 
+    @media (min-width: 1600px) 
+      @content
+  @else if $point == desktop 
     @media (min-width: 70em) 
       @content
   @else if $point == laptop

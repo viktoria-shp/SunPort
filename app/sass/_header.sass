@@ -3,10 +3,12 @@
   position: fixed
   display: flex 
   padding: 16px 0
+  transition: all .5s cubic-bezier(.215,.61,.355,1)
   &__wrapper
     display: flex
     justify-content: space-between
     margin: 25px 10px
+    transition: all .5s cubic-bezier(.215,.61,.355,1)
     +breakpoint(laptop)
       margin: 55px 25px
     +breakpoint(desktop)
@@ -56,7 +58,7 @@
 .header.fixed
   background-color: #3881D8
   z-index: 10
-  transition: all .3s cubic-bezier(.215,.61,.355,1)
+  transition: all .5s cubic-bezier(.215,.61,.355,1)
   .header__wrapper
     margin-top: 0
     margin-bottom: 0

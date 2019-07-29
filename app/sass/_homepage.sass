@@ -2,8 +2,6 @@
   background-image: url("../img/header-img.jpg")
   background-repeat: round
   height: 100vh
-  +breakpoint(mobileonly)
-    height: auto
   &__description
     text-align: center
     margin: 100px 20px 60px
@@ -11,7 +9,7 @@
       margin: 150px 0 150px
       text-align: none
     +breakpoint(laptop)
-      margin: 290px 0 370px
+      margin-top: 290px
       text-align: none
     .title
       font-weight: 500
@@ -85,6 +83,7 @@
     &__title
       margin: 20px 0
       text-align: left
+      color: #4D4C4C
       +breakpoint(desktop)
         margin-bottom: 60px   
       span
@@ -100,6 +99,7 @@
           font-size: 40px   
     &__text
       text-align: justify
+      color: #787878
       p
         font-family: $mfont
         font-size: 10px
@@ -121,9 +121,7 @@
     +breakpoint(tablet)
       align-items: center
       text-align: unset
-      flex-direction: row
-    +breakpoint(desktop)
-      margin-bottom: 60px  
+      flex-direction: row 
     >div:last-child
       padding-left: 5px
       +breakpoint(tablet)
@@ -170,13 +168,18 @@
           width: 13%
           +breakpoint(laptop)
             padding-right: 20px
-        +breakpoint(laptop)
-          font-size: 14px
-          margin: 12px 0
-        +breakpoint(desktop)
-          font-size: 20px 
-          margin: 16px 0 
+          +breakpoint(laptop)
+            font-size: 14px
+            margin: 12px 0
+          +breakpoint(desktop)
+            font-size: 20px 
+            margin: 16px 0 
+      a:hover
+        color: #C4C4C4
+        img
+          filter: grayscale(1)
     &__title
+      color: #4D4C4C
       margin-bottom: 10px
       +breakpoint(laptop)
         margin-bottom: 30px
@@ -265,7 +268,9 @@
     width: 14%
     justify-content: flex-end
 .gallery
-  margin: 40px 0 30px
+  margin: 30px 0
+  +breakpoint(laptop)
+    margin: 60px 0 50px
   +breakpoint(laptop)
     margin: 80px 0 60px
   &__title
@@ -274,9 +279,10 @@
     font-size: 20px
     text-transform: uppercase
     margin-bottom: 20px
+    color: #4D4C4C
     +breakpoint(tablet)
       font-size: 20px
-      margin-bottom: 40px
+      margin-bottom: 30px
     +breakpoint(laptop)
       font-size: 30px
     +breakpoint(desktop)
@@ -290,13 +296,12 @@
       justify-content: space-between
     .gallery__img-width
       overflow: hidden
-      max-height: 300px
+      max-height: 170px
       margin: 10px 0
-      +breakpoint(tablet)
-        max-height: 200px
       +breakpoint(laptop)
-        width: calc(25% - 30px)
-        padding: 0        
+        width: calc(25% - 7px)   
+      +breakpoint(desktop)
+        width: calc(25% - 14px)   
   &__link
     margin-top: 10px
     display: flex
@@ -306,18 +311,26 @@
     a
       color: #57A4FF
       font-family: $mfont
-      font-size: 20px
+      font-size: 15px
       text-decoration: none
       display: flex
+      +breakpoint(laptop)
+        font-size: 20px
+      span
+        margin-right: 10px
       img 
-        margin-left: 10px
         width: 8%
-        +breakpoint(tablet)
-          margin-left: 20px
+    a:hover
+      color: #C4C4C4
+      img
+        filter: grayscale(1)   
+
 .section-news
   background-color: #F6F6F6
-  padding: 40px 0
-  +breakpoint(tablet)
+  padding: 30px 0
+  +breakpoint(laptop)
+    padding: 60px 0
+  +breakpoint(desktop)
     padding: 80px 0
   .news
     &__title
@@ -329,49 +342,69 @@
       margin-bottom: 20px
       +breakpoint(tablet)
         font-size: 20px
-        color: #4D4C4C
-        margin-bottom: 40px
       +breakpoint(laptop)
+        font-size: 30px
+      +breakpoint(desktop)
         font-size: 40px
-        margin-bottom: 60px
+        margin-bottom: 50px
     &__items
       display: flex
       flex-direction: row
+      +breakpoint(tablet)
+        margin: 0 -7px!important
+      +breakpoint(laptop)
+        margin: 0 -14px!important
       .news-item      
         font-family: $mfont
+        width: calc(100% - 30px)
+        +breakpoint(tablet)
+          padding: 0 7px
+        +breakpoint(laptop)
+          padding: 0 15px
         &__img
           display: flex
+          position: relative
+        &__img:hover
+          filter: grayscale(1)  
         .news__img-width
           overflow: hidden
-          max-height: 170px
-          margin:  0 15px          
+          max-height: 170px 
+        &__img.left_ind
+          &:after
+              content: ""
+              position: absolute
+              top: 149px
+              width: 20px
+              height: 99px
+              background: #ff0  
         &__title
           font-style: medium
           font-size: 16px
-          margin: 10px 15px
+          margin: 10px 0
+          a 
+            text-decoration: none
+            color: #4D4C4C
+          a:hover
+            color: #C4C4C4
           +breakpoint(tablet)
             font-size: 18px
-            margin: 10px 15px
+            margin: 10px 0
           +breakpoint(laptop)
             font-size: 22px
             margin-bottom: 20px
-            a 
-              text-decoration: none
-              color: #4D4C4C
         &__date
           font-size: 14px
           color: #C4C4C4
-          margin: 10px 15px
+          margin: 10px 0
           +breakpoint(tablet)
             font-size: 14px
-            margin: 5px 15px 10px
+            margin: 5px 0 10px
           +breakpoint(laptop)
             font-size: 18px
-            margin: 15px
         &__text
           font-size: 12px
           color: #787878
-          margin: 10px 15px
+          margin: 10px 0
           +breakpoint(tablet)
             font-size: 14px
             color: #787878
@@ -385,18 +418,23 @@
             color: #57A4FF
             font-size: 14px
             text-decoration: none
-            margin: 10px 15px
+            margin: 10px 0
+            display: flex
             +breakpoint(tablet)
               margin: 0
               font-size: 16px
-              margin: 10px 15px
+              margin: 10px 0
             +breakpoint(laptop)
               margin: 15px
               font-size: 18px
             span
-              margin: 10px 15px
-              +breakpoint(tablet)
-                margin-left: 15px
+              padding-right: 10px
+          a:hover
+            color: #C4C4C4
+            img
+              filter: grayscale(1)  
+            
+        
 .slick-carousel
   .slide-content
     margin: 0 $gutters
@@ -406,24 +444,36 @@
      margin: 20px 0px 
   .slick-prev, .slick-next 
     position: absolute
-    width: 30px
-    height: 30px
+    width: 15px
+    height: 15px
     color: #57A4FF 
+    display: none!important
+    background-size: 25px
+    background-repeat: no-repeat
+    +breakpoint(laptop)
+      background-size: 30px
+      width: 30px
+      height: 30px
+      display: inline-block!important
   .slick-prev:hover, .slick-next:hover
     color: #E5E5E5
   .slick-prev 
     background-image: url(../img/arrow-left.svg)
     left: -15px
     +breakpoint(laptop)
-      left: -10px
-    +breakpoint(desktop)
+      left: -5px
+    @media(min-width:1400px)
+      left: -60px
+    +breakpoint(largedesktop)
       left: -120px
   .slick-next 
     background-image: url(../img/arrow-right.svg)
     right: -15px
     +breakpoint(laptop)
-      right: -10px
-    +breakpoint(desktop)
+      right: -5px
+    @media(min-width:1400px)
+      right: -60px
+    +breakpoint(largedesktop)
       right: -120px
   .slick-prev:before, .slick-next:before
     content: ''
@@ -439,4 +489,6 @@
     color: #57A4FF 
   .slick-dots
     +breakpoint(mobileonly)
-      bottom: 25px
+      bottom: 0
+    +breakpoint(tablet)
+      margin: 30px 0

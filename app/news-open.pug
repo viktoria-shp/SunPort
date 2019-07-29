@@ -9,7 +9,7 @@ body
       .column-tablet-1-1
         .header__wrapper
           .logo 
-            a(href="#")
+            a(href="/")
               span сонячний порт
           .menu-opener
             span
@@ -18,17 +18,17 @@ body
           .menu
             -
               var menu = [
-                {text:'Головна', href:'index.html#hero', active: 1},
-                {text:'Про проект', href:'#about'},
-                {text:'Показники', href:'#indexes'},
-                {text:'Галерея', href:'#gallery '},
-                {text:'Новини', href:'#news'},
-                {text:'Контакти', href:'#contact'}
+                {text:'Головна', href:'/#hero'},
+                {text:'Про проект', href:'/#about'},
+                {text:'Показники', href:'/#indexes'},
+                {text:'Галерея', href:'/#gallery'},
+                {text:'Новини', href:'/#news'},
+                {text:'Контакти', href:'/#contact'}
               ];
             +menu(menu)
 .wrapper
   .row.section-news-description
-    .news-description#about
+    .news-description
       .column-laptop-1-2
         .news-description__img.right_ind
           img(src="img/description-project.jpg")
@@ -42,7 +42,7 @@ body
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur lorem donec massa sapien faucibus et molestie. Vel risus commodo viverra maecenas accumsan lacus vel. Egestas integer eget aliquet nibh praesent tristique. Sit amet risus nullam eget felis. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Iaculis at erat pellentesque adipiscing. Lectus urna duis convallis convallis tellus id. Amet justo donec enim diam vulputate ut pharetra sit. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Quis risus sed vulputate odio ut enim blandit volutpat. Ac orci phasellus egestas tellus rutrum tellus pellentesque.
       p fermentum leo vel orci porta non pulvinar neque laoreet. Id aliquet risus feugiat in ante metus dictum at tempor. In hac habitasse platea dictumst quisque sagittis purus sit amet. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Bibendum ut tristique et egestas quis ipsum. Pretium viverra suspendisse potenti nullam ac tortor vitae purus. Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Sed adipiscing diam donec adipiscing tristique risus nec. Porta lorem mollis aliquam ut porttitor leo a diam. Convallis tellus id interdum velit laoreet id. Non blandit massa enim nec dui. Id volutpat lacus laoreet non curabitur. Quam pellentesque nec nam aliquam sem et. Ornare arcu odio ut sem nulla pharetra diam sit amet. Gravida quis blandit turpis cursus in hac habitasse platea.
           .news-description__link
-            img(src="img/arrow-newsbeack.svg")
-            a(href="index.html") Вернутися назад
-              
+            a(href="index.html")               
+              img(src="img/arrow-newsbeack.svg")   
+              span Вернутися назад           
 include partials/footer
